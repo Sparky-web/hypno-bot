@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tg_users",
+  "info": {
+    "singularName": "tg-user",
+    "pluralName": "tg-users",
+    "displayName": "tgUsers",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uId": {
+      "type": "biginteger"
+    },
+    "username": {
+      "type": "string"
+    }
+  }
+}

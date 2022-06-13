@@ -1,0 +1,28 @@
+{
+  "sessions": [
+    {
+      "id": "438670811:438670811",
+      "data": {
+        "__scenes": {
+          "current": "MAIN",
+          "state": {},
+          "cursor": 0
+        },
+        "history": [
+          "MAIN"
+        ],
+        "btnClicked": {
+          "id": 4,
+          "BTN_TEXT": "Базовый",
+          "AFTER": "*Описание базового курса регрессии*"
+        },
+        "btnClicked1": {
+          "id": 20,
+          "BTN_TEXT": "5",
+          "AFTER": "Five"
+        },
+        "btnHistory": []
+      }
+    }
+  ]
+}

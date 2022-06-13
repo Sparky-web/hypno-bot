@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_keyboards_main_keyboards",
+  "info": {
+    "displayName": "MAIN_KEYBOARD",
+    "icon": "hourglass-start",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "REGRESSION_BTN": {
+      "type": "component",
+      "repeatable": false,
+      "component": "keyboards.button"
+    },
+    "SELF_KNOWLEDGE_BTN": {
+      "type": "component",
+      "repeatable": false,
+      "component": "keyboards.button"
+    },
+    "HYPNO_BTN": {
+      "type": "component",
+      "repeatable": false,
+      "component": "keyboards.button"
+    }
+  }
+}
