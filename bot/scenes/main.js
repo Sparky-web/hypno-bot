@@ -22,16 +22,16 @@ export const createMainScene = composeWizardScene(
 
         handleMenuAction([
             {
-                button: config.MAIN_KEYBOARD.REGRESSION_BTN,
-                scene: scenes.REGRESSION
-            },
-            {
-                button: config.MAIN_KEYBOARD.SELF_KNOWLEDGE_BTN,
-                scene: scenes.SELF
-            },
-            {
                 button: config.MAIN_KEYBOARD.HYPNO_BTN,
                 scene: scenes.HYPNO
+            },
+            {
+                button: config.MAIN_KEYBOARD.RELATIONSHIP_BTN,
+                scene: scenes.RELATIONSHIP
+            },
+            {
+                button: config.MAIN_KEYBOARD.MONEY_FREEDOM_BTN,
+                scene: scenes.MONEY_FREEDOM
             }
         ])(ctx)
     }

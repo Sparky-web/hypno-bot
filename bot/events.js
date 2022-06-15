@@ -5,15 +5,12 @@ import scenes from './scene-types.js'
 import LocalSession from 'telegraf-session-local'
 import { getConfig } from '../modules/config.js'
 import { createMainScene } from './scenes/main.js'
-import { createSelfScene } from './scenes/self.js'
-import { createRegressionScene } from './scenes/regression.js'
+import { createRelationshipScene } from './scenes/relationship.js'
 import { createHypnoScene } from './scenes/hypno.js'
 import { createPaymentScene } from './scenes/payment.js'
 import { createMoneyFreedoomScene } from './scenes/moneyFreedoom.js'
-import { createPaymentWithMoneyFreedomScene } from './scenes/paymentWithMoneyFreedom.js'
 import { createCourseScene } from './scenes/course.js'
 import { createOperatorScene } from './scenes/operator.js'
-import { handleAdminActions } from './tg-helpers.js'
 import { createAdminDialogeScene } from './scenes/adminDialoge.js'
 
 const userMiddleware = async (ctx, next) => {
@@ -36,12 +33,10 @@ export const register = (bot) => {
 
     const stage = new Scenes.Stage([
         createMainScene(scenes.MAIN),
-        createSelfScene(scenes.SELF),
-        createRegressionScene(scenes.REGRESSION),
+        createRelationshipScene(scenes.RELATIONSHIP),
         createHypnoScene(scenes.HYPNO),
-        createPaymentScene(scenes.PAYMENT),
         createMoneyFreedoomScene(scenes.MONEY_FREEDOM),
-        createPaymentWithMoneyFreedomScene(scenes.PAYMENT_WITH_MONEY_FREEDOM),
+        createPaymentScene(scenes.PAYMENT),
         createCourseScene(scenes.COURSE),
         createOperatorScene(scenes.OPERATOR),
         createAdminDialogeScene(scenes.ADMIN_DIALOGE)

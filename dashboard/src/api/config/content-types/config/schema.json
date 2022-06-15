@@ -32,12 +32,7 @@
       "repeatable": false,
       "component": "keyboards.main-keyboard"
     },
-    "REGRESSION_KEYBOARD": {
-      "type": "component",
-      "repeatable": true,
-      "component": "keyboards.button"
-    },
-    "SELF_KNOWLEDGE_KEYBOARD": {
+    "RELATIONSHIP_KEYBOARD": {
       "type": "component",
       "repeatable": true,
       "component": "keyboards.button"
@@ -75,11 +70,6 @@
     },
     "adminNotification": {
       "type": "text"
-    },
-    "MONEY_FREEDOOM_BTN": {
-      "type": "component",
-      "repeatable": false,
-      "component": "keyboards.button"
     },
     "operatorText": {
       "type": "text"

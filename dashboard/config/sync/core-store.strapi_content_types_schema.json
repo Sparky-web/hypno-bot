@@ -629,6 +629,274 @@
       "plugin": "admin",
       "globalId": "AdminApiToken"
     },
+    "api::config.config": {
+      "kind": "singleType",
+      "collectionName": "configs",
+      "info": {
+        "singularName": "config",
+        "pluralName": "configs",
+        "displayName": "config",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": false
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "START_TEXT": {
+          "type": "text"
+        },
+        "START_IMAGE": {
+          "type": "media",
+          "multiple": false,
+          "required": false,
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ]
+        },
+        "MAIN_KEYBOARD": {
+          "displayName": "MAIN_KEYBOARD",
+          "type": "component",
+          "repeatable": false,
+          "component": "keyboards.main-keyboard"
+        },
+        "RELATIONSHIP_KEYBOARD": {
+          "type": "component",
+          "repeatable": true,
+          "component": "keyboards.button"
+        },
+        "HYPNO_KEYBOARD": {
+          "type": "component",
+          "repeatable": true,
+          "component": "keyboards.button"
+        },
+        "PAYMENT_KEYBOARD": {
+          "displayName": "PAYMENT_KEYBOARD",
+          "type": "component",
+          "repeatable": false,
+          "component": "keyboards.payment-keyboard"
+        },
+        "MONEY_FREEDOOM_KEYBOARD": {
+          "displayName": "MONEY_FREEDOM_KEYBOARD",
+          "type": "component",
+          "repeatable": false,
+          "component": "keyboards.money-freedom-keyboard"
+        },
+        "COURSE_KEYBOARD": {
+          "displayName": "COURSE_KEYBOARD",
+          "type": "component",
+          "repeatable": false,
+          "component": "keyboards.course-keyboard"
+        },
+        "BACK_BTN": {
+          "type": "component",
+          "repeatable": false,
+          "component": "keyboards.button"
+        },
+        "adminId": {
+          "type": "biginteger"
+        },
+        "adminNotification": {
+          "type": "text"
+        },
+        "operatorText": {
+          "type": "text"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "configs",
+        "info": {
+          "singularName": "config",
+          "pluralName": "configs",
+          "displayName": "config",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": false
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "START_TEXT": {
+            "type": "text"
+          },
+          "START_IMAGE": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ]
+          },
+          "MAIN_KEYBOARD": {
+            "displayName": "MAIN_KEYBOARD",
+            "type": "component",
+            "repeatable": false,
+            "component": "keyboards.main-keyboard"
+          },
+          "RELATIONSHIP_KEYBOARD": {
+            "type": "component",
+            "repeatable": true,
+            "component": "keyboards.button"
+          },
+          "HYPNO_KEYBOARD": {
+            "type": "component",
+            "repeatable": true,
+            "component": "keyboards.button"
+          },
+          "PAYMENT_KEYBOARD": {
+            "displayName": "PAYMENT_KEYBOARD",
+            "type": "component",
+            "repeatable": false,
+            "component": "keyboards.payment-keyboard"
+          },
+          "MONEY_FREEDOOM_KEYBOARD": {
+            "displayName": "MONEY_FREEDOM_KEYBOARD",
+            "type": "component",
+            "repeatable": false,
+            "component": "keyboards.money-freedom-keyboard"
+          },
+          "COURSE_KEYBOARD": {
+            "displayName": "COURSE_KEYBOARD",
+            "type": "component",
+            "repeatable": false,
+            "component": "keyboards.course-keyboard"
+          },
+          "BACK_BTN": {
+            "type": "component",
+            "repeatable": false,
+            "component": "keyboards.button"
+          },
+          "adminId": {
+            "type": "biginteger"
+          },
+          "adminNotification": {
+            "type": "text"
+          },
+          "operatorText": {
+            "type": "text"
+          }
+        },
+        "kind": "singleType"
+      },
+      "modelType": "contentType",
+      "modelName": "config",
+      "connection": "default",
+      "uid": "api::config.config",
+      "apiName": "config",
+      "globalId": "Config",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::tg-user.tg-user": {
+      "kind": "collectionType",
+      "collectionName": "tg_users",
+      "info": {
+        "singularName": "tg-user",
+        "pluralName": "tg-users",
+        "displayName": "tgUsers",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": false
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "uId": {
+          "type": "biginteger"
+        },
+        "username": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "tg_users",
+        "info": {
+          "singularName": "tg-user",
+          "pluralName": "tg-users",
+          "displayName": "tgUsers",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": false
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "uId": {
+            "type": "biginteger"
+          },
+          "username": {
+            "type": "string"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "tg-user",
+      "connection": "default",
+      "uid": "api::tg-user.tg-user",
+      "apiName": "tg-user",
+      "globalId": "TgUser",
+      "actions": {},
+      "lifecycles": {}
+    },
     "plugin::upload.file": {
       "collectionName": "files",
       "info": {
@@ -1346,294 +1614,6 @@
       "uid": "plugin::users-permissions.user",
       "plugin": "users-permissions",
       "globalId": "UsersPermissionsUser"
-    },
-    "api::config.config": {
-      "kind": "singleType",
-      "collectionName": "configs",
-      "info": {
-        "singularName": "config",
-        "pluralName": "configs",
-        "displayName": "config",
-        "description": ""
-      },
-      "options": {
-        "draftAndPublish": false
-      },
-      "pluginOptions": {},
-      "attributes": {
-        "START_TEXT": {
-          "type": "text"
-        },
-        "START_IMAGE": {
-          "type": "media",
-          "multiple": false,
-          "required": false,
-          "allowedTypes": [
-            "images",
-            "files",
-            "videos",
-            "audios"
-          ]
-        },
-        "MAIN_KEYBOARD": {
-          "displayName": "MAIN_KEYBOARD",
-          "type": "component",
-          "repeatable": false,
-          "component": "keyboards.main-keyboard"
-        },
-        "REGRESSION_KEYBOARD": {
-          "type": "component",
-          "repeatable": true,
-          "component": "keyboards.button"
-        },
-        "SELF_KNOWLEDGE_KEYBOARD": {
-          "type": "component",
-          "repeatable": true,
-          "component": "keyboards.button"
-        },
-        "HYPNO_KEYBOARD": {
-          "type": "component",
-          "repeatable": true,
-          "component": "keyboards.button"
-        },
-        "PAYMENT_KEYBOARD": {
-          "displayName": "PAYMENT_KEYBOARD",
-          "type": "component",
-          "repeatable": false,
-          "component": "keyboards.payment-keyboard"
-        },
-        "MONEY_FREEDOOM_KEYBOARD": {
-          "displayName": "MONEY_FREEDOM_KEYBOARD",
-          "type": "component",
-          "repeatable": false,
-          "component": "keyboards.money-freedom-keyboard"
-        },
-        "COURSE_KEYBOARD": {
-          "displayName": "COURSE_KEYBOARD",
-          "type": "component",
-          "repeatable": false,
-          "component": "keyboards.course-keyboard"
-        },
-        "BACK_BTN": {
-          "type": "component",
-          "repeatable": false,
-          "component": "keyboards.button"
-        },
-        "adminId": {
-          "type": "biginteger"
-        },
-        "adminNotification": {
-          "type": "text"
-        },
-        "MONEY_FREEDOOM_BTN": {
-          "type": "component",
-          "repeatable": false,
-          "component": "keyboards.button"
-        },
-        "operatorText": {
-          "type": "text"
-        },
-        "createdAt": {
-          "type": "datetime"
-        },
-        "updatedAt": {
-          "type": "datetime"
-        },
-        "createdBy": {
-          "type": "relation",
-          "relation": "oneToOne",
-          "target": "admin::user",
-          "configurable": false,
-          "writable": false,
-          "visible": false,
-          "useJoinTable": false,
-          "private": true
-        },
-        "updatedBy": {
-          "type": "relation",
-          "relation": "oneToOne",
-          "target": "admin::user",
-          "configurable": false,
-          "writable": false,
-          "visible": false,
-          "useJoinTable": false,
-          "private": true
-        }
-      },
-      "__schema__": {
-        "collectionName": "configs",
-        "info": {
-          "singularName": "config",
-          "pluralName": "configs",
-          "displayName": "config",
-          "description": ""
-        },
-        "options": {
-          "draftAndPublish": false
-        },
-        "pluginOptions": {},
-        "attributes": {
-          "START_TEXT": {
-            "type": "text"
-          },
-          "START_IMAGE": {
-            "type": "media",
-            "multiple": false,
-            "required": false,
-            "allowedTypes": [
-              "images",
-              "files",
-              "videos",
-              "audios"
-            ]
-          },
-          "MAIN_KEYBOARD": {
-            "displayName": "MAIN_KEYBOARD",
-            "type": "component",
-            "repeatable": false,
-            "component": "keyboards.main-keyboard"
-          },
-          "REGRESSION_KEYBOARD": {
-            "type": "component",
-            "repeatable": true,
-            "component": "keyboards.button"
-          },
-          "SELF_KNOWLEDGE_KEYBOARD": {
-            "type": "component",
-            "repeatable": true,
-            "component": "keyboards.button"
-          },
-          "HYPNO_KEYBOARD": {
-            "type": "component",
-            "repeatable": true,
-            "component": "keyboards.button"
-          },
-          "PAYMENT_KEYBOARD": {
-            "displayName": "PAYMENT_KEYBOARD",
-            "type": "component",
-            "repeatable": false,
-            "component": "keyboards.payment-keyboard"
-          },
-          "MONEY_FREEDOOM_KEYBOARD": {
-            "displayName": "MONEY_FREEDOM_KEYBOARD",
-            "type": "component",
-            "repeatable": false,
-            "component": "keyboards.money-freedom-keyboard"
-          },
-          "COURSE_KEYBOARD": {
-            "displayName": "COURSE_KEYBOARD",
-            "type": "component",
-            "repeatable": false,
-            "component": "keyboards.course-keyboard"
-          },
-          "BACK_BTN": {
-            "type": "component",
-            "repeatable": false,
-            "component": "keyboards.button"
-          },
-          "adminId": {
-            "type": "biginteger"
-          },
-          "adminNotification": {
-            "type": "text"
-          },
-          "MONEY_FREEDOOM_BTN": {
-            "type": "component",
-            "repeatable": false,
-            "component": "keyboards.button"
-          },
-          "operatorText": {
-            "type": "text"
-          }
-        },
-        "kind": "singleType"
-      },
-      "modelType": "contentType",
-      "modelName": "config",
-      "connection": "default",
-      "uid": "api::config.config",
-      "apiName": "config",
-      "globalId": "Config",
-      "actions": {},
-      "lifecycles": {}
-    },
-    "api::tg-user.tg-user": {
-      "kind": "collectionType",
-      "collectionName": "tg_users",
-      "info": {
-        "singularName": "tg-user",
-        "pluralName": "tg-users",
-        "displayName": "tgUsers",
-        "description": ""
-      },
-      "options": {
-        "draftAndPublish": false
-      },
-      "pluginOptions": {},
-      "attributes": {
-        "uId": {
-          "type": "biginteger"
-        },
-        "username": {
-          "type": "string"
-        },
-        "createdAt": {
-          "type": "datetime"
-        },
-        "updatedAt": {
-          "type": "datetime"
-        },
-        "createdBy": {
-          "type": "relation",
-          "relation": "oneToOne",
-          "target": "admin::user",
-          "configurable": false,
-          "writable": false,
-          "visible": false,
-          "useJoinTable": false,
-          "private": true
-        },
-        "updatedBy": {
-          "type": "relation",
-          "relation": "oneToOne",
-          "target": "admin::user",
-          "configurable": false,
-          "writable": false,
-          "visible": false,
-          "useJoinTable": false,
-          "private": true
-        }
-      },
-      "__schema__": {
-        "collectionName": "tg_users",
-        "info": {
-          "singularName": "tg-user",
-          "pluralName": "tg-users",
-          "displayName": "tgUsers",
-          "description": ""
-        },
-        "options": {
-          "draftAndPublish": false
-        },
-        "pluginOptions": {},
-        "attributes": {
-          "uId": {
-            "type": "biginteger"
-          },
-          "username": {
-            "type": "string"
-          }
-        },
-        "kind": "collectionType"
-      },
-      "modelType": "contentType",
-      "modelName": "tg-user",
-      "connection": "default",
-      "uid": "api::tg-user.tg-user",
-      "apiName": "tg-user",
-      "globalId": "TgUser",
-      "actions": {},
-      "lifecycles": {}
     }
   },
   "type": "object",

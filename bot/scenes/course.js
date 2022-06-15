@@ -28,7 +28,7 @@ export const createCourseScene = composeWizardScene(
                 button: config.COURSE_KEYBOARD.VIP_BTN,
                 handler: (ctx) => {
                     ctx.session.btnClicked = config.COURSE_KEYBOARD.VIP_BTN
-                    ctx.scene.enter(scenes.COURSE)
+                    ctx.scene.enter(scenes.PAYMENT)
                 }
             },
             handleBackBtn(ctx)

@@ -20,34 +20,6 @@
           "sortable": false
         }
       },
-      "REGRESSION_BTN": {
-        "edit": {
-          "label": "REGRESSION_BTN",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "REGRESSION_BTN",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "SELF_KNOWLEDGE_BTN": {
-        "edit": {
-          "label": "SELF_KNOWLEDGE_BTN",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "SELF_KNOWLEDGE_BTN",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "HYPNO_BTN": {
         "edit": {
           "label": "HYPNO_BTN",
@@ -61,31 +33,59 @@
           "searchable": false,
           "sortable": false
         }
+      },
+      "MONEY_FREEDOM_BTN": {
+        "edit": {
+          "label": "MONEY_FREEDOM_BTN",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "MONEY_FREEDOM_BTN",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "RELATIONSHIP_BTN": {
+        "edit": {
+          "label": "RELATIONSHIP_BTN",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "RELATIONSHIP_BTN",
+          "searchable": false,
+          "sortable": false
+        }
       }
     },
     "layouts": {
       "list": [
         "id",
-        "REGRESSION_BTN",
-        "SELF_KNOWLEDGE_BTN",
-        "HYPNO_BTN"
+        "HYPNO_BTN",
+        "MONEY_FREEDOM_BTN",
+        "RELATIONSHIP_BTN"
       ],
       "edit": [
         [
           {
-            "name": "REGRESSION_BTN",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "SELF_KNOWLEDGE_BTN",
-            "size": 12
-          }
-        ],
-        [
-          {
             "name": "HYPNO_BTN",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "MONEY_FREEDOM_BTN",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "RELATIONSHIP_BTN",
             "size": 12
           }
         ]

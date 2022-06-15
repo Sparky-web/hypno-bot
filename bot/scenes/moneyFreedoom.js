@@ -6,7 +6,7 @@ import { sendMessage } from "../tg-helpers.js";
 
 export const createMoneyFreedoomScene = composeWizardScene(
     async (ctx) => {
-        const button = ctx.config.MONEY_FREEDOOM_BTN
+        const button = ctx.config.MAIN_KEYBOARD.MONEY_FREEDOM_BTN
         await sendMessage({
             ctx,
             message: button.AFTER, 

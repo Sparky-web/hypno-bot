@@ -16,16 +16,9 @@ const getKeyboard = (keyboard = "main", addButtons) => {
             ])
             break
         }
-        case 'regression': {
+        case 'relationship': {
             result = ([
-                ..._.chunk(toButtons(config.REGRESSION_KEYBOARD), 2),
-                toButtons([config.BACK_BTN])
-            ])
-            break
-        }
-        case 'self_knowledge': {
-            result = ([
-                ..._.chunk(toButtons(config.SELF_KNOWLEDGE_KEYBOARD), 2),
+                ..._.chunk(toButtons(config.RELATIONSHIP_KEYBOARD), 2),
                 toButtons([config.BACK_BTN])
             ])
             break
@@ -55,14 +48,6 @@ const getKeyboard = (keyboard = "main", addButtons) => {
             result = ([
                 toButtons(Object.values(config.PAYMENT_KEYBOARD)),
                 toButtons([config.BACK_BTN])
-            ])
-            break
-        }
-        case 'paymentWithMoneyFreedom': {
-            result = ([
-                toButtons(Object.values(config.PAYMENT_KEYBOARD)),
-                toButtons([config.MONEY_FREEDOOM_BTN]),
-                toButtons([config.BACK_BTN]),
             ])
             break
         }

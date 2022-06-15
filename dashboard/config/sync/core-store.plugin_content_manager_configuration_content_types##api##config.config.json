@@ -62,30 +62,16 @@
           "sortable": false
         }
       },
-      "REGRESSION_KEYBOARD": {
+      "RELATIONSHIP_KEYBOARD": {
         "edit": {
-          "label": "REGRESSION_KEYBOARD",
+          "label": "RELATIONSHIP_KEYBOARD",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "REGRESSION_KEYBOARD",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "SELF_KNOWLEDGE_KEYBOARD": {
-        "edit": {
-          "label": "SELF_KNOWLEDGE_KEYBOARD",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "SELF_KNOWLEDGE_KEYBOARD",
+          "label": "RELATIONSHIP_KEYBOARD",
           "searchable": false,
           "sortable": false
         }
@@ -188,20 +174,6 @@
           "sortable": true
         }
       },
-      "MONEY_FREEDOOM_BTN": {
-        "edit": {
-          "label": "MONEY_FREEDOOM_BTN",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MONEY_FREEDOOM_BTN",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "operatorText": {
         "edit": {
           "label": "operatorText",
@@ -273,18 +245,6 @@
         ],
         [
           {
-            "name": "REGRESSION_KEYBOARD",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "SELF_KNOWLEDGE_KEYBOARD",
-            "size": 12
-          }
-        ],
-        [
-          {
             "name": "HYPNO_KEYBOARD",
             "size": 12
           }
@@ -325,14 +285,14 @@
         ],
         [
           {
-            "name": "MONEY_FREEDOOM_BTN",
-            "size": 12
+            "name": "operatorText",
+            "size": 6
           }
         ],
         [
           {
-            "name": "operatorText",
-            "size": 6
+            "name": "RELATIONSHIP_KEYBOARD",
+            "size": 12
           }
         ]
       ],

@@ -7,17 +7,17 @@
   },
   "options": {},
   "attributes": {
-    "REGRESSION_BTN": {
-      "type": "component",
-      "repeatable": false,
-      "component": "keyboards.button"
-    },
-    "SELF_KNOWLEDGE_BTN": {
-      "type": "component",
-      "repeatable": false,
-      "component": "keyboards.button"
-    },
     "HYPNO_BTN": {
+      "type": "component",
+      "repeatable": false,
+      "component": "keyboards.button"
+    },
+    "MONEY_FREEDOM_BTN": {
+      "type": "component",
+      "repeatable": false,
+      "component": "keyboards.button"
+    },
+    "RELATIONSHIP_BTN": {
       "type": "component",
       "repeatable": false,
       "component": "keyboards.button"
