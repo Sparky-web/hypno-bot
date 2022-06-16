@@ -76,16 +76,16 @@
           "sortable": false
         }
       },
-      "HYPNO_KEYBOARD": {
+      "HYPNOTHERAPY_KEYBOARD": {
         "edit": {
-          "label": "HYPNO_KEYBOARD",
+          "label": "HYPNOTHERAPY_KEYBOARD",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "HYPNO_KEYBOARD",
+          "label": "HYPNOTHERAPY_KEYBOARD",
           "searchable": false,
           "sortable": false
         }
@@ -186,6 +186,48 @@
           "label": "operatorText",
           "searchable": true,
           "sortable": true
+        }
+      },
+      "REGRESSION_KEYBOARD": {
+        "edit": {
+          "label": "REGRESSION_KEYBOARD",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "REGRESSION_KEYBOARD",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "SELF_KNOWLEDGE_KEYBOARD": {
+        "edit": {
+          "label": "SELF_KNOWLEDGE_KEYBOARD",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "SELF_KNOWLEDGE_KEYBOARD",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "HYPNO_KEYBOARD": {
+        "edit": {
+          "label": "HYPNO_KEYBOARD",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "HYPNO_KEYBOARD",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -292,6 +334,24 @@
         [
           {
             "name": "RELATIONSHIP_KEYBOARD",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "HYPNOTHERAPY_KEYBOARD",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "REGRESSION_KEYBOARD",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "SELF_KNOWLEDGE_KEYBOARD",
             "size": 12
           }
         ]

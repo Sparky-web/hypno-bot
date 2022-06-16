@@ -668,7 +668,7 @@
           "repeatable": true,
           "component": "keyboards.button"
         },
-        "HYPNO_KEYBOARD": {
+        "HYPNOTHERAPY_KEYBOARD": {
           "type": "component",
           "repeatable": true,
           "component": "keyboards.button"
@@ -704,6 +704,21 @@
         },
         "operatorText": {
           "type": "text"
+        },
+        "REGRESSION_KEYBOARD": {
+          "type": "component",
+          "repeatable": true,
+          "component": "keyboards.button"
+        },
+        "SELF_KNOWLEDGE_KEYBOARD": {
+          "type": "component",
+          "repeatable": true,
+          "component": "keyboards.button"
+        },
+        "HYPNO_KEYBOARD": {
+          "type": "component",
+          "repeatable": true,
+          "component": "keyboards.button"
         },
         "createdAt": {
           "type": "datetime"
@@ -770,7 +785,7 @@
             "repeatable": true,
             "component": "keyboards.button"
           },
-          "HYPNO_KEYBOARD": {
+          "HYPNOTHERAPY_KEYBOARD": {
             "type": "component",
             "repeatable": true,
             "component": "keyboards.button"
@@ -806,6 +821,21 @@
           },
           "operatorText": {
             "type": "text"
+          },
+          "REGRESSION_KEYBOARD": {
+            "type": "component",
+            "repeatable": true,
+            "component": "keyboards.button"
+          },
+          "SELF_KNOWLEDGE_KEYBOARD": {
+            "type": "component",
+            "repeatable": true,
+            "component": "keyboards.button"
+          },
+          "HYPNO_KEYBOARD": {
+            "type": "component",
+            "repeatable": true,
+            "component": "keyboards.button"
           }
         },
         "kind": "singleType"

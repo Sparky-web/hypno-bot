@@ -20,16 +20,16 @@
           "sortable": false
         }
       },
-      "HYPNO_BTN": {
+      "HYPNOTHERAPY_BTN": {
         "edit": {
-          "label": "HYPNO_BTN",
+          "label": "HYPNOTHERAPY_BTN",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "HYPNO_BTN",
+          "label": "HYPNOTHERAPY_BTN",
           "searchable": false,
           "sortable": false
         }
@@ -66,17 +66,11 @@
     "layouts": {
       "list": [
         "id",
-        "HYPNO_BTN",
         "MONEY_FREEDOM_BTN",
-        "RELATIONSHIP_BTN"
+        "RELATIONSHIP_BTN",
+        "HYPNOTHERAPY_BTN"
       ],
       "edit": [
-        [
-          {
-            "name": "HYPNO_BTN",
-            "size": 12
-          }
-        ],
         [
           {
             "name": "MONEY_FREEDOM_BTN",
@@ -86,6 +80,12 @@
         [
           {
             "name": "RELATIONSHIP_BTN",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "HYPNOTHERAPY_BTN",
             "size": 12
           }
         ]
