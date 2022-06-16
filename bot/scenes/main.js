@@ -22,8 +22,8 @@ export const createMainScene = composeWizardScene(
 
         handleMenuAction([
             {
-                button: config.MAIN_KEYBOARD.HYPNO_BTN,
-                scene: scenes.HYPNO
+                button: config.MAIN_KEYBOARD.HYPNOTHERAPY_BTN,
+                scene: scenes.HYPNOTHERAPY
             },
             {
                 button: config.MAIN_KEYBOARD.RELATIONSHIP_BTN,

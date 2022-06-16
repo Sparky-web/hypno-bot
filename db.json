@@ -12,9 +12,12 @@
           "MAIN"
         ],
         "btnClicked": {
-          "id": 27,
-          "BTN_TEXT": "Помогите",
-          "AFTER": "*помогите*"
+          "id": 13,
+          "BTN_TEXT": "Управление",
+          "AFTER": "*описание управления*",
+          "IMAGE": {
+            "data": null
+          }
         },
         "btnClicked1": {
           "id": 20,

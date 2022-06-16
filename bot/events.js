@@ -6,12 +6,16 @@ import LocalSession from 'telegraf-session-local'
 import { getConfig } from '../modules/config.js'
 import { createMainScene } from './scenes/main.js'
 import { createRelationshipScene } from './scenes/relationship.js'
-import { createHypnoScene } from './scenes/hypno.js'
+import { createHypnoTherapyScene } from './scenes/hypnotherapy.js'
+import { createHypnoScene } from "./scenes/hypno.js"
 import { createPaymentScene } from './scenes/payment.js'
 import { createMoneyFreedoomScene } from './scenes/moneyFreedoom.js'
 import { createCourseScene } from './scenes/course.js'
 import { createOperatorScene } from './scenes/operator.js'
 import { createAdminDialogeScene } from './scenes/adminDialoge.js'
+import { createSelfScene } from './scenes/self.js'
+import { createRegressionScene } from './scenes/regression.js'
+import { createQuestionScene } from './scenes/question.js'
 
 const userMiddleware = async (ctx, next) => {
     let [user] = await strapi.get("tg-users", { uId: ctx.chat.id })
@@ -35,11 +39,15 @@ export const register = (bot) => {
         createMainScene(scenes.MAIN),
         createRelationshipScene(scenes.RELATIONSHIP),
         createHypnoScene(scenes.HYPNO),
+        createHypnoTherapyScene(scenes.HYPNOTHERAPY),
         createMoneyFreedoomScene(scenes.MONEY_FREEDOM),
         createPaymentScene(scenes.PAYMENT),
         createCourseScene(scenes.COURSE),
         createOperatorScene(scenes.OPERATOR),
-        createAdminDialogeScene(scenes.ADMIN_DIALOGE)
+        createSelfScene(scenes.SELF),
+        createAdminDialogeScene(scenes.ADMIN_DIALOGE),
+        createRegressionScene(scenes.REGRESSION),
+        createQuestionScene(scenes.QUESTION)
     ])
 
     bot.use((new LocalSession({ database: 'db.json' })).middleware())

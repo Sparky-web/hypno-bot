@@ -1,5 +1,6 @@
 const scenes = {
     MAIN: "MAIN",
+    HYPNOTHERAPY: "HYPNOTHERAPY",
     HYPNO: "HYPNO",
     RELATIONSHIP: "RELATIONSHIP",
     PAYMENT: "PAYMENT",
@@ -7,6 +8,9 @@ const scenes = {
     COURSE: "COURSE",
     OPERATOR: "OPERATOR",
     ADMIN_DIALOGE: "ADMIN_DIALOGE",
+    SELF: "SELF",
+    REGRESSION: "REGRESSION",
+    QUESTION: "QUESTION"
 }
 
 export default scenes;

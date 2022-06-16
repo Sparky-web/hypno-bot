@@ -4,13 +4,19 @@ import scenes from "../scene-types.js";
 import { handleBackBtn } from "../tg-helpers.js";
 import { sendMessage } from "../tg-helpers.js";
 
-export const createHypnoScene = composeWizardScene(
+const btnScenes = [
+    scenes.REGRESSION,
+    scenes.HYPNO,
+    scenes.SELF
+]
+
+export const createHypnoTherapyScene = composeWizardScene(
     async (ctx) => {
-        const button = ctx.config.HYPNOTHERAPY_KEYBOARD[1]
+        const button = ctx.config.MAIN_KEYBOARD.HYPNOTHERAPY_BTN
         await sendMessage({
             ctx,
             message: button.AFTER, 
-            keyboard: getKeyboard("hypno").reply(),
+            keyboard: getKeyboard("hypnotherapy").reply(),
             imageStrapi: button.IMAGE
         })
         ctx.wizard.next()
@@ -19,11 +25,11 @@ export const createHypnoScene = composeWizardScene(
         const config = ctx.config
 
         handleMenuAction([
-            ...config.HYPNO_KEYBOARD.map(btn => ({
+            ...config.HYPNOTHERAPY_KEYBOARD.map((btn, i) => ({
                 message: btn.BTN_TEXT,
                 handler: async (ctx) => {
                     ctx.session.btnClicked = btn
-                    ctx.scene.enter(scenes.PAYMENT)
+                    ctx.scene.enter(btnScenes[i])
                 }
             })),
             handleBackBtn(ctx)

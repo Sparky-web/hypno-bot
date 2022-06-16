@@ -23,7 +23,7 @@ export const createMoneyFreedoomScene = composeWizardScene(
                 button: config.MONEY_FREEDOOM_KEYBOARD.MANAGEMENT_BTN,
                 handler: async (ctx) => {
                     ctx.session.btnClicked = config.MONEY_FREEDOOM_KEYBOARD.MANAGEMENT_BTN
-                    ctx.scene.enter(scenes.PAYMENT)
+                    ctx.scene.enter(scenes.QUESTION)
                 }
             },
             {

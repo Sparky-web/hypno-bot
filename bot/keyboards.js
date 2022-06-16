@@ -30,6 +30,27 @@ const getKeyboard = (keyboard = "main", addButtons) => {
             ])
             break
         }
+        case 'hypnotherapy': {
+            result = ([
+                ..._.chunk(toButtons(config.HYPNOTHERAPY_KEYBOARD), 2),
+                toButtons([config.BACK_BTN])
+            ])
+            break
+        }
+        case 'regression': {
+            result = ([
+                ..._.chunk(toButtons(config.REGRESSION_KEYBOARD), 2),
+                toButtons([config.BACK_BTN])
+            ])
+            break
+        }
+        case 'self': {
+            result = ([
+                ..._.chunk(toButtons(config.SELF_KNOWLEDGE_KEYBOARD), 2),
+                toButtons([config.BACK_BTN])
+            ])
+            break
+        }
         case 'money': {
             result = ([
                 ..._.chunk(toButtons(Object.values(config.MONEY_FREEDOOM_KEYBOARD)), 2),
@@ -51,6 +72,13 @@ const getKeyboard = (keyboard = "main", addButtons) => {
             ])
             break
         }
+        case 'question': {
+            result = ([
+                toButtons([config.PAYMENT_KEYBOARD.QUESTION_BTN]),
+                toButtons([config.BACK_BTN])
+            ])
+            break;
+        }
         case 'back': {
             result = ([
                 [config.BACK_BTN.BTN_TEXT]
@@ -59,7 +87,7 @@ const getKeyboard = (keyboard = "main", addButtons) => {
         }
     }
 
-    if(addButtons) result = [...result, toButtons(addButtons)]
+    if (addButtons) result = [...result, toButtons(addButtons)]
 
     return Keyboard.make(result)
 

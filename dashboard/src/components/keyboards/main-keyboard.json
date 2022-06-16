@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "HYPNO_BTN": {
+    "HYPNOTHERAPY_BTN": {
       "type": "component",
       "repeatable": false,
       "component": "keyboards.button"
