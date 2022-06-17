@@ -31,7 +31,9 @@ export const composeWizardScene = (...advancedSteps) => (
 );
 
 export const handleMenuAction = (actions) => async (ctx, done) => {
-    console.log(actions, ctx.message.text)
+    console.log(actions)
+    console.log(ctx.message.text)
+
     for (let action of actions) {
         let text = action.message
         let messageToSend = null
