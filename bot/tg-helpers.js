@@ -52,6 +52,7 @@ export const sendMessage = async ({
     photo = null,
     options = {}
 }) => {
+    options = {...options, link_preview: false}
     message = telegramifyMarkdown(message)
     try {
         const strapiImageUrl = imageStrapi?.data?.attributes?.url
