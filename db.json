@@ -4,12 +4,13 @@
       "id": "438670811:438670811",
       "data": {
         "__scenes": {
-          "current": "MAIN",
+          "current": "MONEY_FREEDOOM",
           "state": {},
           "cursor": 0
         },
         "history": [
-          "MAIN"
+          "MAIN",
+          "MONEY_FREEDOOM"
         ],
         "btnClicked": {
           "id": 34,
@@ -27,7 +28,9 @@
             "data": null
           }
         },
-        "btnHistory": []
+        "btnHistory": [
+          "Финансовая свобода"
+        ]
       }
     }
   ]
