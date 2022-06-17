@@ -41,8 +41,8 @@ export const handleMenuAction = (actions) => async (ctx, done) => {
         }
 
         if (text === ctx.message.text) {
-            if(!ctx.session.btnHistory) ctx.session.btnHistory = []
-            if(!ctx.session.btnHistory.includes(text) && text !== ctx.config.BACK_BTN.BTN_TEXT) ctx.session.btnHistory.push(text)
+            if (!ctx.session.btnHistory) ctx.session.btnHistory = []
+            if (!ctx.session.btnHistory.includes(text) && text !== ctx.config.BACK_BTN.BTN_TEXT) ctx.session.btnHistory.push(text)
 
             if (action.scene) return await ctx.scene.enter(action.scene)
             if (messageToSend && !action.handler) sendMessage({ ctx, message: messageToSend })
@@ -55,6 +55,11 @@ export const handleMenuAction = (actions) => async (ctx, done) => {
 
     const isHandled = await handleAdminActions(ctx)
     if (isHandled) return
+
+    if (ctx.message.text === "/start") {
+        ctx.scene.enter(scenes.MAIN)
+        return
+    }
 
     ctx.reply("Команда не найдена, используйте клавиатуру")
     ctx.scene.enter(scenes.MAIN)

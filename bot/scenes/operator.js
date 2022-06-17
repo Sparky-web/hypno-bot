@@ -6,7 +6,7 @@ import { sendMessage } from "../tg-helpers.js";
 
 export const createOperatorScene = composeWizardScene(
     async (ctx) => {
-        ctx.reply(ctx.config.operatorText, getKeyboard("back").reply())
+        ctx.reply(ctx.session.btnClicked1.AFTER, getKeyboard("back").reply())
         ctx.wizard.next()
     },
     async ctx => {

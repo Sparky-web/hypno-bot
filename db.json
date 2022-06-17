@@ -12,17 +12,20 @@
           "MAIN"
         ],
         "btnClicked": {
-          "id": 13,
-          "BTN_TEXT": "Управление",
-          "AFTER": "*описание управления*",
+          "id": 34,
+          "BTN_TEXT": "HYPNOTECH 500",
+          "AFTER": "*HYPNOTECH 500*",
           "IMAGE": {
             "data": null
           }
         },
         "btnClicked1": {
-          "id": 20,
-          "BTN_TEXT": "5",
-          "AFTER": "Five"
+          "id": 10,
+          "BTN_TEXT": "Оплатить",
+          "AFTER": "Кидай на карту",
+          "IMAGE": {
+            "data": null
+          }
         },
         "btnHistory": []
       }

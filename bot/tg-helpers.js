@@ -106,7 +106,7 @@ export const sendAdminNotification = async (ctx, action) => {
         .replace(/{path}/g, ctx.session.btnHistory.join(" -> "))
         .replace(/{date}/g, dateStr)
 
-    await sendMessage({ message, chatId: config.adminId })
+    await sendMessage({ message, chatId: ctx.config.adminId })
 }
 
 export const handleBackBtn = (ctx) => ({

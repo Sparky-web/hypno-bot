@@ -8,7 +8,7 @@ export const createPaymentScene = composeWizardScene(
         const button = ctx.session.btnClicked
         await sendMessage({
             ctx,
-            message: button.AFTER, 
+            message: button.AFTER,
             keyboard: getKeyboard("payment").reply(),
             imageStrapi: button.IMAGE
         })
@@ -21,10 +21,7 @@ export const createPaymentScene = composeWizardScene(
             {
                 button: config.PAYMENT_KEYBOARD.PAY_BTN,
                 handler: async ctx => {
-                    await sendMessage({
-                        ctx, 
-                        message: config.PAYMENT_KEYBOARD.PAY_BTN.AFTER
-                    })
+                    ctx.session.btnClicked1 = config.PAYMENT_KEYBOARD.PAY_BTN
                     await sendAdminNotification(ctx, "вошел в чат")
                     ctx.scene.enter(scenes.OPERATOR)
                 }
@@ -32,10 +29,7 @@ export const createPaymentScene = composeWizardScene(
             {
                 button: config.PAYMENT_KEYBOARD.QUESTION_BTN,
                 handler: async ctx => {
-                    await sendMessage({
-                        ctx, 
-                        message: config.PAYMENT_KEYBOARD.QUESTION_BTN.AFTER
-                    })
+                    ctx.session.btnClicked1 = config.PAYMENT_KEYBOARD.QUESTION_BTN
                     await sendAdminNotification(ctx, "вошел в чат")
                     ctx.scene.enter(scenes.OPERATOR)
                 }

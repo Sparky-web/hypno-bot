@@ -31,6 +31,13 @@ export const createCourseScene = composeWizardScene(
                     ctx.scene.enter(scenes.PAYMENT)
                 }
             },
+            {
+                button: config.COURSE_KEYBOARD.HYPNO500_BTN,
+                handler: ctx => {
+                    ctx.session.btnClicked = config.COURSE_KEYBOARD.HYPNO500_BTN
+                    ctx.scene.enter(scenes.PAYMENT)
+                }
+            },
             handleBackBtn(ctx)
         ])(ctx)
     }
