@@ -19,7 +19,7 @@ export const sendMarkdownMessage = async (ctx, text, keyboard, options = {}) => 
 export const handleAdminActions = async (ctx) => {
     try {
         if(ctx.message.text !== "/message") return
-        if (!ctx.chat.id === ctx.config.adminId) return
+        if (ctx.chat.id !== ctx.config.adminId) return
 
         ctx.scene.enter(scenes.ADMIN_DIALOGE)
         return true
