@@ -15,7 +15,8 @@ export const createAdminDialogeScene = composeWizardScene(
             return
         }
 
-        const [user] = await strapi.get("tg-users", { username: ctx.message.text })
+        const [user] = await strapi.get("tg-users", { filters: {username: ctx.message.text} })
+
         if (!user) {
             ctx.reply(`Пользователь ${ctx.message.text} не найден`)
             return

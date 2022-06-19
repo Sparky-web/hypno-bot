@@ -98,9 +98,11 @@ export const sendMessage = async ({
 }
 
 export const sendAdminNotification = async (ctx, action) => {
+    console.log(ctx.chat)
     const dateStr = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT, { locale: 'ru' })
 
     const message = config.adminNotification
+        .replace(/{name}/g, ctx.chat.first_name)
         .replace(/{username}/g, ctx.chat.username)
         .replace(/{userId}/g, ctx.chat.id)
         .replace(/{action}/g, action)
