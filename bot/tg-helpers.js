@@ -98,7 +98,6 @@ export const sendMessage = async ({
 }
 
 export const sendAdminNotification = async (ctx, action) => {
-    console.log(ctx.chat)
     const dateStr = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT, { locale: 'ru' })
 
     const message = config.adminNotification
