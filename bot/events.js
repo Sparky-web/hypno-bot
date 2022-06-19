@@ -18,7 +18,7 @@ import { createRegressionScene } from './scenes/regression.js'
 import { createQuestionScene } from './scenes/question.js'
 
 const userMiddleware = async (ctx, next) => {
-    let [user] = await strapi.get("tg-users", { uId: ctx.chat.id })
+    let [user] = await strapi.get("tg-users", { filters: {uId: ctx.chat.id} })
 
     if (!user) user = await strapi.create("tg-users", {
         uId: ctx.chat.id,
