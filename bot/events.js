@@ -53,6 +53,7 @@ export const register = (bot) => {
     bot.use((new LocalSession({ database: 'db.json' })).middleware())
     bot.use(stage.middleware());
     bot.start(ctx => ctx.scene.enter(scenes.MAIN))
+    bot.on("message", ctx => ctx.scene.enter(scenes.MAIN))
 }
 
 export default { register }
