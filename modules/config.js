@@ -1,7 +1,13 @@
 import strapi from "./strapi.js";
 
+const locales = ["ru", "en", "es"]
+
 const fetchConfig = async () => {
-    const config = await strapi.get("config", { populate: "*" })
+    let config = {}
+    for (let locale of locales) {
+        config[locale] = await strapi.get("config", { populate: "*", locale })
+    }
+
     return config
 }
 
@@ -15,7 +21,7 @@ export const revalidateConfig = async () => {
     }
 }
 
-export const getConfig = () => config
+export const getConfig = (locale) => config[locale]
 
 setInterval(async () => {
     revalidateConfig()

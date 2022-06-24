@@ -15,8 +15,8 @@ export const createHypnoTherapyScene = composeWizardScene(
         const button = ctx.config.MAIN_KEYBOARD.HYPNOTHERAPY_BTN
         await sendMessage({
             ctx,
-            message: button.AFTER, 
-            keyboard: getKeyboard("hypnotherapy").reply(),
+            message: button.AFTER,
+            keyboard: getKeyboard(ctx, "hypnotherapy").reply(),
             imageStrapi: button.IMAGE
         })
         ctx.wizard.next()
@@ -28,8 +28,17 @@ export const createHypnoTherapyScene = composeWizardScene(
             ...config.HYPNOTHERAPY_KEYBOARD.map((btn, i) => ({
                 message: btn.BTN_TEXT,
                 handler: async (ctx) => {
-                    ctx.session.btnClicked = btn
-                    ctx.scene.enter(btnScenes[i])
+                    if (btnScenes[i]) {
+                        ctx.session.btnClicked = btn
+                        ctx.scene.enter(btnScenes[i])
+                        return
+                    }
+
+                    await sendMessage({
+                        ctx,
+                        message: btn.AFTER,
+                        imageStrapi: btn.IMAGE
+                    })
                 }
             })),
             handleBackBtn(ctx)

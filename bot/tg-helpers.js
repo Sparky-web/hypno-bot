@@ -1,8 +1,19 @@
-import config from "../modules/config.js"
+import config, { getConfig } from "../modules/config.js"
 import bot from "./index.js"
 import { DateTime } from "luxon"
 import telegramifyMarkdown from "telegramify-markdown";
 import scenes from "./scene-types.js";
+import strapi from "../modules/strapi.js";
+import { getKeyboard } from "./keyboards.js";
+
+export const selectLanguage = async (ctx) => {
+    await sendMessage({
+        ctx,
+        message: "Выберите язык / Choose Language / Elige lengua",
+        keyboard: getKeyboard(ctx, "locale").reply()
+    })
+    return
+}
 
 export const sendMarkdownMessage = async (ctx, text, keyboard, options = {}) => {
     try {
@@ -18,7 +29,7 @@ export const sendMarkdownMessage = async (ctx, text, keyboard, options = {}) => 
 
 export const handleAdminActions = async (ctx) => {
     try {
-        if(ctx.message.text !== "/message") return
+        if (ctx.message.text !== "/message") return
         if (+ctx.chat.id !== +ctx.config.adminId) return
 
         ctx.scene.enter(scenes.ADMIN_DIALOGE)
@@ -52,7 +63,7 @@ export const sendMessage = async ({
     photo = null,
     options = {}
 }) => {
-    options = {...options, link_preview: false}
+    options = { ...options, link_preview: false }
     message = telegramifyMarkdown(message)
     try {
         const strapiImageUrl = imageStrapi?.data?.attributes?.url
@@ -130,6 +141,19 @@ export const writeHistory = (currentScene, ctx) => {
 
     if (ctx.session.history.includes(currentScene)) return
     ctx.session.history.push(currentScene)
+}
+
+export const changeLocale = async (ctx, locale) => {
+    await strapi.update("tg-users", {
+        ...ctx.user,
+        locale
+    })
+
+    ctx.user = {
+        ...ctx.user,
+        locale
+    }
+    ctx.config = getConfig(locale)
 }
 
 export default { sendMarkdownMessage, sendMarkdownPhotoMessage }

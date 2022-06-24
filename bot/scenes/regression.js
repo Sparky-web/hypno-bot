@@ -10,7 +10,7 @@ export const createRegressionScene = composeWizardScene(
         await sendMessage({
             ctx,
             message: button.AFTER, 
-            keyboard: getKeyboard("regression").reply(),
+            keyboard: getKeyboard(ctx, "regression").reply(),
             imageStrapi: button.IMAGE
         })
         ctx.wizard.next()

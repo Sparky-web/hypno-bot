@@ -1,18 +1,18 @@
-import { Key, Keyboard } from "telegram-keyboard"
-import _config, { getConfig } from "../modules/config.js"
+import { Keyboard } from "telegram-keyboard"
+import _config from "../modules/config.js"
 import _ from "lodash"
 
-const toButtons = (obj) => obj.map(e => e.BTN_TEXT).filter(e => e)
+const toButtons = (obj) => obj ? obj.map(e => e?.BTN_TEXT).filter(e => e) : []
 
-const getKeyboard = (keyboard = "main", addButtons) => {
-    const config = getConfig()
+const getKeyboard = (ctx, keyboard = "main", addButtons) => {
+    const config = ctx.config
 
     let result
 
     switch (keyboard) {
         case 'main': {
             result = ([
-                [...toButtons(Object.values(config.MAIN_KEYBOARD))]
+                ..._.chunk(toButtons(Object.values(config.MAIN_KEYBOARD)), 3)
             ])
             break
         }
@@ -84,6 +84,9 @@ const getKeyboard = (keyboard = "main", addButtons) => {
                 [config.BACK_BTN.BTN_TEXT]
             ])
             break
+        }
+        case 'locale': {
+            result = ["Русский", "English", "Español"]
         }
     }
 

@@ -1,4 +1,5 @@
 import { Telegraf } from 'telegraf'
+import { getConfig } from '../modules/config.js'
 import events from "./events.js"
 
 const bot = new Telegraf(process.env.BOT_TOKEN)

@@ -10,7 +10,7 @@ export const createMoneyFreedoomScene = composeWizardScene(
         await sendMessage({
             ctx,
             message: button.AFTER, 
-            keyboard: getKeyboard("money").reply(),
+            keyboard: getKeyboard(ctx, "money").reply(),
             imageStrapi: button.IMAGE
         })
         ctx.wizard.next()

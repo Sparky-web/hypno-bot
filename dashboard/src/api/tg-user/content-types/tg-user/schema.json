@@ -17,6 +17,12 @@
     },
     "username": {
       "type": "string"
+    },
+    "locale": {
+      "type": "string",
+      "default": "ru",
+      "required": false,
+      "regex": "ru|en|es"
     }
   }
 }

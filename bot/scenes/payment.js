@@ -9,7 +9,7 @@ export const createPaymentScene = composeWizardScene(
         await sendMessage({
             ctx,
             message: button.AFTER,
-            keyboard: getKeyboard("payment").reply(),
+            keyboard: getKeyboard(ctx, "payment").reply(),
             imageStrapi: button.IMAGE
         })
         ctx.wizard.next()

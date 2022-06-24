@@ -10,7 +10,7 @@ export const createRelationshipScene = composeWizardScene(
         await sendMessage({
             ctx,
             message: button.AFTER, 
-            keyboard: getKeyboard("relationship").reply(),
+            keyboard: getKeyboard(ctx, "relationship").reply(),
             imageStrapi: button.IMAGE
         })
         ctx.wizard.next()

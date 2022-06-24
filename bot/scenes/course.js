@@ -8,7 +8,7 @@ export const createCourseScene = composeWizardScene(
         await sendMessage({
             ctx,
             message: ctx.config.MONEY_FREEDOOM_KEYBOARD.COURSE_BTN.AFTER, 
-            keyboard: getKeyboard("course").reply(),
+            keyboard: getKeyboard(ctx, "course").reply(),
             imageStrapi: ctx.config.MONEY_FREEDOOM_KEYBOARD.COURSE_BTN.IMAGE
         })
         ctx.wizard.next()

@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "keyboards.button"
+    },
+    "CHOOSE_LOCALE": {
+      "type": "component",
+      "repeatable": false,
+      "component": "keyboards.button"
     }
   }
 }

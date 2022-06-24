@@ -10,7 +10,8 @@ const scenes = {
     ADMIN_DIALOGE: "ADMIN_DIALOGE",
     SELF: "SELF",
     REGRESSION: "REGRESSION",
-    QUESTION: "QUESTION"
+    QUESTION: "QUESTION",
+    LOCALE: "LOCALE"
 }
 
 export default scenes;

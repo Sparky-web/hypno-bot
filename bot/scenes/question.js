@@ -9,7 +9,7 @@ export const createQuestionScene = composeWizardScene(
         await sendMessage({
             ctx,
             message: button.AFTER,
-            keyboard: getKeyboard("question").reply(),
+            keyboard: getKeyboard(ctx, "question").reply(),
             imageStrapi: button.IMAGE
         })
         ctx.wizard.next()

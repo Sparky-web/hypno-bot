@@ -6,7 +6,7 @@ import { sendMessage } from "../tg-helpers.js";
 
 export const createAdminDialogeScene = composeWizardScene(
     (ctx) => {
-        ctx.reply('Введите юзернейм', getKeyboard("back").reply())
+        ctx.reply('Введите юзернейм', getKeyboard(ctx, "back").reply())
         ctx.wizard.next()
     },
     async (ctx) => {

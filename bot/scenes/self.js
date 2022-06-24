@@ -10,7 +10,7 @@ export const createSelfScene = composeWizardScene(
         await sendMessage({
             ctx,
             message: button.AFTER, 
-            keyboard: getKeyboard("self").reply(),
+            keyboard: getKeyboard(ctx, "self").reply(),
             imageStrapi: button.IMAGE
         })
         ctx.wizard.next()

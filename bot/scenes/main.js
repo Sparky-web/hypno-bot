@@ -1,14 +1,14 @@
 import { getKeyboard } from "../keyboards.js";
 import scenes from "../scene-types.js";
 import { composeWizardScene, handleMenuAction } from "./factory.js";
-import { sendMessage } from "../tg-helpers.js";
+import { selectLanguage, sendMessage } from "../tg-helpers.js";
 
 export const createMainScene = composeWizardScene(
     async (ctx) => {
         await sendMessage({
             ctx,
             message: ctx.config.START_TEXT, 
-            keyboard: getKeyboard("main").reply(),
+            keyboard: getKeyboard(ctx, "main").reply(),
             imageStrapi: ctx.config.START_IMAGE
         })
 
@@ -32,6 +32,13 @@ export const createMainScene = composeWizardScene(
             {
                 button: config.MAIN_KEYBOARD.MONEY_FREEDOM_BTN,
                 scene: scenes.MONEY_FREEDOM
+            },
+            {
+                button: config.MAIN_KEYBOARD.CHOOSE_LOCALE,
+                handler: async ctx => {
+                    ctx.scene.leave()
+                    selectLanguage(ctx)
+                }
             }
         ])(ctx)
     }
