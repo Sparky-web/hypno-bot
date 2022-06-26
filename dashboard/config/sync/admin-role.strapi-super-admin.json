@@ -19,6 +19,9 @@
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.BTN_TEXT",
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.AFTER",
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.IMAGE",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.BTN_TEXT",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.AFTER",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.IMAGE",
           "RELATIONSHIP_KEYBOARD.BTN_TEXT",
           "RELATIONSHIP_KEYBOARD.AFTER",
           "RELATIONSHIP_KEYBOARD.IMAGE",
@@ -61,6 +64,11 @@
           "HYPNO_KEYBOARD.BTN_TEXT",
           "HYPNO_KEYBOARD.AFTER",
           "HYPNO_KEYBOARD.IMAGE"
+        ],
+        "locales": [
+          "en",
+          "ru",
+          "es"
         ]
       },
       "conditions": []
@@ -68,7 +76,13 @@
     {
       "action": "plugin::content-manager.explorer.delete",
       "subject": "api::config.config",
-      "properties": {},
+      "properties": {
+        "locales": [
+          "en",
+          "ru",
+          "es"
+        ]
+      },
       "conditions": []
     },
     {
@@ -87,6 +101,9 @@
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.BTN_TEXT",
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.AFTER",
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.IMAGE",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.BTN_TEXT",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.AFTER",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.IMAGE",
           "RELATIONSHIP_KEYBOARD.BTN_TEXT",
           "RELATIONSHIP_KEYBOARD.AFTER",
           "RELATIONSHIP_KEYBOARD.IMAGE",
@@ -129,6 +146,11 @@
           "HYPNO_KEYBOARD.BTN_TEXT",
           "HYPNO_KEYBOARD.AFTER",
           "HYPNO_KEYBOARD.IMAGE"
+        ],
+        "locales": [
+          "en",
+          "ru",
+          "es"
         ]
       },
       "conditions": []
@@ -149,6 +171,9 @@
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.BTN_TEXT",
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.AFTER",
           "MAIN_KEYBOARD.RELATIONSHIP_BTN.IMAGE",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.BTN_TEXT",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.AFTER",
+          "MAIN_KEYBOARD.CHOOSE_LOCALE.IMAGE",
           "RELATIONSHIP_KEYBOARD.BTN_TEXT",
           "RELATIONSHIP_KEYBOARD.AFTER",
           "RELATIONSHIP_KEYBOARD.IMAGE",
@@ -191,6 +216,11 @@
           "HYPNO_KEYBOARD.BTN_TEXT",
           "HYPNO_KEYBOARD.AFTER",
           "HYPNO_KEYBOARD.IMAGE"
+        ],
+        "locales": [
+          "en",
+          "ru",
+          "es"
         ]
       },
       "conditions": []
@@ -201,7 +231,8 @@
       "properties": {
         "fields": [
           "uId",
-          "username"
+          "username",
+          "locale"
         ]
       },
       "conditions": []
@@ -218,7 +249,8 @@
       "properties": {
         "fields": [
           "uId",
-          "username"
+          "username",
+          "locale"
         ]
       },
       "conditions": []
@@ -229,7 +261,8 @@
       "properties": {
         "fields": [
           "uId",
-          "username"
+          "username",
+          "locale"
         ]
       },
       "conditions": []

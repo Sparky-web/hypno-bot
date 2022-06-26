@@ -61,6 +61,20 @@
           "searchable": false,
           "sortable": false
         }
+      },
+      "CHOOSE_LOCALE": {
+        "edit": {
+          "label": "CHOOSE_LOCALE",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "CHOOSE_LOCALE",
+          "searchable": false,
+          "sortable": false
+        }
       }
     },
     "layouts": {
@@ -86,6 +100,12 @@
         [
           {
             "name": "HYPNOTHERAPY_BTN",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "CHOOSE_LOCALE",
             "size": 12
           }
         ]

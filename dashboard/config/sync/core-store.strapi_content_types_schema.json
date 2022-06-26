@@ -641,10 +641,19 @@
       "options": {
         "draftAndPublish": false
       },
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "attributes": {
         "START_TEXT": {
-          "type": "text"
+          "type": "text",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "START_IMAGE": {
           "type": "media",
@@ -655,70 +664,140 @@
             "files",
             "videos",
             "audios"
-          ]
+          ],
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "MAIN_KEYBOARD": {
           "displayName": "MAIN_KEYBOARD",
           "type": "component",
           "repeatable": false,
-          "component": "keyboards.main-keyboard"
+          "component": "keyboards.main-keyboard",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "RELATIONSHIP_KEYBOARD": {
           "type": "component",
           "repeatable": true,
-          "component": "keyboards.button"
+          "component": "keyboards.button",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "HYPNOTHERAPY_KEYBOARD": {
           "type": "component",
           "repeatable": true,
-          "component": "keyboards.button"
+          "component": "keyboards.button",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "PAYMENT_KEYBOARD": {
           "displayName": "PAYMENT_KEYBOARD",
           "type": "component",
           "repeatable": false,
-          "component": "keyboards.payment-keyboard"
+          "component": "keyboards.payment-keyboard",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "MONEY_FREEDOOM_KEYBOARD": {
           "displayName": "MONEY_FREEDOM_KEYBOARD",
           "type": "component",
           "repeatable": false,
-          "component": "keyboards.money-freedom-keyboard"
+          "component": "keyboards.money-freedom-keyboard",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "COURSE_KEYBOARD": {
           "displayName": "COURSE_KEYBOARD",
           "type": "component",
           "repeatable": false,
-          "component": "keyboards.course-keyboard"
+          "component": "keyboards.course-keyboard",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "BACK_BTN": {
           "type": "component",
           "repeatable": false,
-          "component": "keyboards.button"
+          "component": "keyboards.button",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "adminId": {
-          "type": "biginteger"
+          "type": "biginteger",
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          }
         },
         "adminNotification": {
-          "type": "text"
+          "type": "text",
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          }
         },
         "operatorText": {
-          "type": "text"
+          "type": "text",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "REGRESSION_KEYBOARD": {
           "type": "component",
           "repeatable": true,
-          "component": "keyboards.button"
+          "component": "keyboards.button",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "SELF_KNOWLEDGE_KEYBOARD": {
           "type": "component",
           "repeatable": true,
-          "component": "keyboards.button"
+          "component": "keyboards.button",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "HYPNO_KEYBOARD": {
           "type": "component",
           "repeatable": true,
-          "component": "keyboards.button"
+          "component": "keyboards.button",
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          }
         },
         "createdAt": {
           "type": "datetime"
@@ -745,6 +824,22 @@
           "visible": false,
           "useJoinTable": false,
           "private": true
+        },
+        "localizations": {
+          "writable": true,
+          "private": false,
+          "configurable": false,
+          "visible": false,
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::config.config"
+        },
+        "locale": {
+          "writable": true,
+          "private": false,
+          "configurable": false,
+          "visible": false,
+          "type": "string"
         }
       },
       "__schema__": {
@@ -758,10 +853,19 @@
         "options": {
           "draftAndPublish": false
         },
-        "pluginOptions": {},
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
         "attributes": {
           "START_TEXT": {
-            "type": "text"
+            "type": "text",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "START_IMAGE": {
             "type": "media",
@@ -772,70 +876,140 @@
               "files",
               "videos",
               "audios"
-            ]
+            ],
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "MAIN_KEYBOARD": {
             "displayName": "MAIN_KEYBOARD",
             "type": "component",
             "repeatable": false,
-            "component": "keyboards.main-keyboard"
+            "component": "keyboards.main-keyboard",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "RELATIONSHIP_KEYBOARD": {
             "type": "component",
             "repeatable": true,
-            "component": "keyboards.button"
+            "component": "keyboards.button",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "HYPNOTHERAPY_KEYBOARD": {
             "type": "component",
             "repeatable": true,
-            "component": "keyboards.button"
+            "component": "keyboards.button",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "PAYMENT_KEYBOARD": {
             "displayName": "PAYMENT_KEYBOARD",
             "type": "component",
             "repeatable": false,
-            "component": "keyboards.payment-keyboard"
+            "component": "keyboards.payment-keyboard",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "MONEY_FREEDOOM_KEYBOARD": {
             "displayName": "MONEY_FREEDOM_KEYBOARD",
             "type": "component",
             "repeatable": false,
-            "component": "keyboards.money-freedom-keyboard"
+            "component": "keyboards.money-freedom-keyboard",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "COURSE_KEYBOARD": {
             "displayName": "COURSE_KEYBOARD",
             "type": "component",
             "repeatable": false,
-            "component": "keyboards.course-keyboard"
+            "component": "keyboards.course-keyboard",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "BACK_BTN": {
             "type": "component",
             "repeatable": false,
-            "component": "keyboards.button"
+            "component": "keyboards.button",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "adminId": {
-            "type": "biginteger"
+            "type": "biginteger",
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            }
           },
           "adminNotification": {
-            "type": "text"
+            "type": "text",
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            }
           },
           "operatorText": {
-            "type": "text"
+            "type": "text",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "REGRESSION_KEYBOARD": {
             "type": "component",
             "repeatable": true,
-            "component": "keyboards.button"
+            "component": "keyboards.button",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "SELF_KNOWLEDGE_KEYBOARD": {
             "type": "component",
             "repeatable": true,
-            "component": "keyboards.button"
+            "component": "keyboards.button",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           },
           "HYPNO_KEYBOARD": {
             "type": "component",
             "repeatable": true,
-            "component": "keyboards.button"
+            "component": "keyboards.button",
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            }
           }
         },
         "kind": "singleType"
@@ -868,6 +1042,12 @@
         },
         "username": {
           "type": "string"
+        },
+        "locale": {
+          "type": "string",
+          "default": "ru",
+          "required": false,
+          "regex": "ru|en|es"
         },
         "createdAt": {
           "type": "datetime"
@@ -914,6 +1094,12 @@
           },
           "username": {
             "type": "string"
+          },
+          "locale": {
+            "type": "string",
+            "default": "ru",
+            "required": false,
+            "regex": "ru|en|es"
           }
         },
         "kind": "collectionType"
