@@ -9,9 +9,10 @@ import { getKeyboard } from "./keyboards.js";
 export const selectLanguage = async (ctx) => {
     await sendMessage({
         ctx,
-        message: "Выберите язык / Choose Language / Elige lengua",
+        message: "Русский ⬇️ English ⬇️ Español",
         keyboard: getKeyboard(ctx, "locale").reply()
     })
+
     return
 }
 

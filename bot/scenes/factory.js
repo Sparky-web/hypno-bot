@@ -1,6 +1,6 @@
 import { Scenes } from "telegraf";
 import scenes from "../scene-types.js";
-import { handleAdminActions, sendMessage, writeHistory } from "../tg-helpers.js";
+import { handleAdminActions, selectLanguage, sendMessage, writeHistory } from "../tg-helpers.js";
 const { WizardScene } = Scenes
 
 const unwrapCallback = async (ctx, nextScene) => {
@@ -57,7 +57,8 @@ export const handleMenuAction = (actions) => async (ctx, done) => {
     if (isHandled) return
 
     if (ctx.message.text === "/start") {
-        ctx.scene.enter(scenes.MAIN)
+        ctx.scene.leave()
+        selectLanguage(ctx)
         return
     }
 
